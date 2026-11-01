@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Hace que la página se adapte al
+     tamaño de la pantalla sin verse diminuta.-->
+    <title>Fake Store API</title> <!--El nombre que sale en la pestaña del navegador.-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >  
+    <!--Trae los estilos de Bootstrap desde internet-->
+    <style> 
+    /*Vamos a poner este fragmento chiquitico de css para que quede en especifico esto para todas las cards y todo lo que tenga la clase card*/
+        .card-img-top { /* Es una funcion donde todas las cards van a tener el mismo conjunto digamos, o sea todas van a quedar ocn 
+            todas estas especificaciones. */
+            height: 200px; /* Todas las imagenes del mismo tamaño acordemonos que es por alto fijo en 200 px*/
+            object-fit: contain; /* La imagen quepa completa en ese espacio en especifico, sin estirarse ni recortarse, importate 
+            objeto fijo*/
+            background: white;/* fondo blanco detras de la imagen */
+            padding: 15px; /* La cajita de regalo */ 
+        }
+        .card { 
+            cursor: pointer; /* selecctor de clase tipo card y cursor pointer es para cuando pasa por encima el curso pues se sepa que se puede hacer 
+            click y terminamos los estilos */
+        }
+    </style> 
+</head>
+<!--y terminamos como la configuracion digamos que general-->
+<body class="bg-dark text-white"> <!-- empezamos con el cuerpo del todo lo que se ve, atributo -->
+    <div class="container py-4">  <!-- acordemenos que el div etiqueta, es una caja generica para agrupar cosas container clase de boots donde deja todo 
+        a el centro el contenido y deja las margenes a los lados , pad la caja de regalo, y es el eje arriba y abajo . y el tamaño que va a tener va de 0 a 5-->
+        <h1 class="text-center mb-4"> <!--eqtiqueta princial para lo que vamos a hacer recordar la jerarquia que va a tener dentro de la pagina
+            no mas de 1 h1 y asi , recordamos usar el class para usar el boots y poderlo poner bonito, entonces usamos el texto centrado mb espacio 
+            dejabo del titulo y va a tener el tamño del 4 , margen , abajo, tamaño--> 
+            Fake Store
+        </h1>
+
+        <div id="contenedor" class="row g-4"> <!--voy a llamar a mi etiqueta con el unico nombre especifico contenedor y el atributo row -fila que se acomode
+            una al lado de la otra , 4 cards por fila y el g la separaion entre ellas con el tamañp 24 px -->
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalProducto" tabindex="-1"> <!--div etiqueta, class atributo , id nombre unico atributo para js, modal , 
+        boots donde la conviernte en una ventana emergente , oculta hasta que la abran , tabindex como se comporta con el teclado y permite salir con la letra escape -->
+        <div class="modal-dialog modal-dialog-centered modal-lg"> <!--etiqueta , class atributo , modal y el recuadro de la ventana y el otro, centra de arriba abajo 
+            en la ventana , y el modal lg tamaño grande large-->
+            <div class="modal-content text-dark"> <!--la etiqueta, con un estilo de atributo fondo blanco con bordes y esquinas redondeadas para el content y el dark 
+                tenemos que ponerle la letra oscura por que le body tiene letra blanca y pue sno se veria.--> 
+                <div class="modal-header"> <!--la caja o el div o etqueta , class atributo e titulo queda ala izquierda la x para cerrar queda la derecha en la misma fila 
+                    debajo aparece la linea delgada que la separa del contenido-->
+                    <h5 class="modal-title" id="modalTitulo">Producto</h5> <!--h5 etiqueta, class atributo , estilo de tipo modal, y el id ya sabemos que el nombre unico
+                    lo llamamos producto no seguimos la secuencia, por que necesitamos que sea mas pequeño.-->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button> <!--boton etiqueta , type que tipo de boton es, btn dibuja la equis, el data 
+                    es deboots para al hacer click, la orden del modal, -->
+                </div>
+                <div class="modal-body" id="modalCuerpo">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+    crossorigin="anonymous"></script>  
+    <script src="js/index.js"></script> <!-- el js -->
+</body>
+</html>
